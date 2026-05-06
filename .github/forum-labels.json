@@ -1,0 +1,37 @@
+[
+  {
+    "name": "forum",
+    "color": "6d28d9",
+    "description": "Public thread shown in the zett.ai forum"
+  },
+  {
+    "name": "forum:discussion",
+    "color": "0ea5e9",
+    "description": "General forum discussion"
+  },
+  {
+    "name": "forum:question",
+    "color": "10b981",
+    "description": "Question from the community"
+  },
+  {
+    "name": "forum:proposal",
+    "color": "8b5cf6",
+    "description": "Product, roadmap, or architecture proposal"
+  },
+  {
+    "name": "forum:support",
+    "color": "f59e0b",
+    "description": "Support request or troubleshooting thread"
+  },
+  {
+    "name": "forum:showcase",
+    "color": "f43f5e",
+    "description": "Project, demo, or implementation showcase"
+  },
+  {
+    "name": "forum:announcement",
+    "color": "64748b",
+    "description": "Announcement shown in the public forum"
+  }
+]

@@ -88,6 +88,7 @@
                     <a href="#technology" class="text-slate-600 hover:text-brand-700 transition-colors">Architecture</a>
                     <a href="#features" class="text-slate-600 hover:text-brand-700 transition-colors">Advantages</a>
                     <a href="#resources" class="text-slate-600 hover:text-brand-700 transition-colors">Resources</a>
+                    <a href="forum/" class="text-slate-600 hover:text-brand-700 transition-colors">Forum</a>
                     <a href="portal/" class="text-slate-600 hover:text-brand-700 transition-colors">Portal</a>
                     <a href="#contact" class="px-4 py-2 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-colors">Contact</a>
                 </div>
@@ -109,6 +110,7 @@
                 <a href="#technology" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-50">Architecture</a>
                 <a href="#features" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-50">Advantages</a>
                 <a href="#resources" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-50">Resources</a>
+                <a href="forum/" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-50">Forum</a>
                 <a href="portal/" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-slate-50">Portal</a>
                 <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-700 font-bold hover:bg-slate-50">Contact</a>
             </div>
@@ -533,7 +535,7 @@
         <!-- Resources Section -->
         <section id="resources" class="mb-20">
             <h2 class="text-2xl font-serif font-bold text-slate-900 mb-8">Resources & Documentation</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-3 mb-3">
                         <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0">
@@ -567,9 +569,29 @@
                         Request CXL/LPU Datasheet
                     </a>
                 </div>
+
+                <div class="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-full bg-sky-100 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="messages-square" class="w-5 h-5 text-sky-700"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900">Community Forum</h3>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                        Public discussion board for architecture questions, product feedback, support topics,
+                        demos, proposals, and announcements, backed by GitHub Issues.
+                    </p>
+                    <a href="forum/" class="inline-flex items-center gap-1.5 text-sm font-medium text-brand-600 hover:text-brand-800 transition-colors">
+                        <i data-lucide="message-square-plus" class="w-4 h-4"></i>
+                        Open Forum
+                    </a>
+                </div>
             </div>
 
-            <div class="mt-8 text-center">
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href="forum/" class="inline-block px-6 py-3 border border-slate-200 text-slate-700 font-medium rounded-md hover:border-brand-200 hover:text-brand-700 transition-colors text-sm">
+                    Join Community Forum
+                </a>
                 <a href="portal/" class="inline-block px-6 py-3 bg-slate-900 text-white font-medium rounded-md hover:bg-slate-800 transition-colors text-sm">
                     Access Investor Portal
                 </a>
