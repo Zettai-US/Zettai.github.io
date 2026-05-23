@@ -351,6 +351,66 @@
             </div>
         </section>
 
+        <section id="usage-billing" class="max-w-6xl mx-auto px-4 pb-16 sm:px-6 lg:px-8">
+            <div class="mb-8 max-w-3xl">
+                <p class="mb-2 font-mono text-sm font-bold uppercase tracking-wide text-brand-700" data-i18n="billing.eyebrow">Usage Billing Add-ons</p>
+                <h2 class="font-serif text-3xl font-bold text-slate-950" data-i18n="billing.title">AI Billing and Agent Sandbox Billing</h2>
+                <p class="mt-3 leading-7 text-slate-600" data-i18n="billing.desc">
+                    Usage-based billing can sit below the hardware lease, so customers can validate hosted AI services and agent workloads before moving to a larger on-prem or cluster deployment.
+                </p>
+            </div>
+
+            <div class="grid gap-6 lg:grid-cols-2">
+                <article class="glass-card rounded-lg p-6">
+                    <div class="mb-5 flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-violet-100">
+                                <i data-lucide="brain-circuit" class="h-5 w-5 text-violet-700"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-serif font-bold text-slate-950" data-i18n="billing.aiTitle">AI Billing</h3>
+                                <p class="text-sm text-slate-500" data-i18n="billing.aiKicker">Hosted inference and runtime usage</p>
+                            </div>
+                        </div>
+                        <span class="glass-chip rounded-full px-3 py-1 text-xs font-mono font-bold text-brand-700" data-i18n="billing.metered">Metered</span>
+                    </div>
+                    <ul class="space-y-2 text-sm leading-6 text-slate-600">
+                        <li data-i18n="billing.aiLi1">• Bill by GPU/NPU runtime, token volume, model profile, CXL memory allocation, and managed service level.</li>
+                        <li data-i18n="billing.aiLi2">• Suitable for hosted inference, private model serving, long-context evaluation, RAG, and PoC-to-production transition.</li>
+                        <li data-i18n="billing.aiLi3">• Optional monthly minimum, committed capacity, or burst usage model can be quoted with the lease.</li>
+                    </ul>
+                    <a href="mailto:vickie@zettai.us?subject=Zettai%20AI%20Billing%20Inquiry" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-900">
+                        <i data-lucide="calculator" class="h-4 w-4"></i>
+                        <span data-i18n="billing.aiCta">Request AI billing model</span>
+                    </a>
+                </article>
+
+                <article class="glass-card rounded-lg p-6">
+                    <div class="mb-5 flex items-start justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-amber-100">
+                                <i data-lucide="bot" class="h-5 w-5 text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-serif font-bold text-slate-950" data-i18n="billing.agentTitle">Agent Sandbox Billing</h3>
+                                <p class="text-sm text-slate-500" data-i18n="billing.agentKicker">Isolated environments for agent workloads</p>
+                            </div>
+                        </div>
+                        <span class="glass-chip rounded-full px-3 py-1 text-xs font-mono font-bold text-brand-700" data-i18n="billing.isolated">Isolated</span>
+                    </div>
+                    <ul class="space-y-2 text-sm leading-6 text-slate-600">
+                        <li data-i18n="billing.agentLi1">• Bill by sandbox instance, CPU/GPU/NPU allocation, wall-clock runtime, persistent storage, network, and API usage.</li>
+                        <li data-i18n="billing.agentLi2">• Built for coding agents, research agents, browser automation, tool-use evaluation, and reproducible experiment runs.</li>
+                        <li data-i18n="billing.agentLi3">• Supports per-seat, per-project, or committed sandbox pools for teams that need predictable capacity.</li>
+                    </ul>
+                    <a href="mailto:vickie@zettai.us?subject=Zettai%20Agent%20Sandbox%20Billing%20Inquiry" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-900">
+                        <i data-lucide="calculator" class="h-4 w-4"></i>
+                        <span data-i18n="billing.agentCta">Request sandbox billing model</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
         <section class="glass-dark-section py-16 text-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
@@ -521,6 +581,25 @@
                         pilotLi2: '• Validates end-to-end value across B200-class GPUs, CXL RPU, Lanxin NPU, CXL memory, and scheduling software.',
                         pilotLi3: '• Produces reports on tokens/s, first-token latency, CXL bandwidth, RPU DMA, NPU offload, and TCO.'
                     },
+                    billing: {
+                        eyebrow: 'Usage Billing Add-ons',
+                        title: 'AI Billing and Agent Sandbox Billing',
+                        desc: 'Usage-based billing can sit below the hardware lease, so customers can validate hosted AI services and agent workloads before moving to a larger on-prem or cluster deployment.',
+                        aiTitle: 'AI Billing',
+                        aiKicker: 'Hosted inference and runtime usage',
+                        metered: 'Metered',
+                        aiLi1: '• Bill by GPU/NPU runtime, token volume, model profile, CXL memory allocation, and managed service level.',
+                        aiLi2: '• Suitable for hosted inference, private model serving, long-context evaluation, RAG, and PoC-to-production transition.',
+                        aiLi3: '• Optional monthly minimum, committed capacity, or burst usage model can be quoted with the lease.',
+                        aiCta: 'Request AI billing model',
+                        agentTitle: 'Agent Sandbox Billing',
+                        agentKicker: 'Isolated environments for agent workloads',
+                        isolated: 'Isolated',
+                        agentLi1: '• Bill by sandbox instance, CPU/GPU/NPU allocation, wall-clock runtime, persistent storage, network, and API usage.',
+                        agentLi2: '• Built for coding agents, research agents, browser automation, tool-use evaluation, and reproducible experiment runs.',
+                        agentLi3: '• Supports per-seat, per-project, or committed sandbox pools for teams that need predictable capacity.',
+                        agentCta: 'Request sandbox billing model'
+                    },
                     commercial: {
                         eyebrow: 'Commercial Structure',
                         title: 'Suggested Commercial Structure',
@@ -618,6 +697,25 @@
                         pilotLi1: '• 可按 8x8 GPU、16x4 混合节点、32x2 高节点数三种方式组织。',
                         pilotLi2: '• 验证 B200-class GPU、CXL RPU、Lanxin NPU、CXL memory 和调度软件的端到端价值。',
                         pilotLi3: '• 输出 tokens/s、first-token latency、CXL bandwidth、RPU DMA、NPU offload 和 TCO 报告。'
+                    },
+                    billing: {
+                        eyebrow: '用量计费附加项',
+                        title: 'AI 计费与 Agent Sandbox 计费',
+                        desc: '用量计费可以放在硬件租赁之下，让客户在扩大到现场部署或集群部署前，先验证托管 AI 服务和 Agent 工作负载。',
+                        aiTitle: 'AI 计费',
+                        aiKicker: '托管推理与运行时用量',
+                        metered: '按量',
+                        aiLi1: '• 按 GPU/NPU 运行时长、token 用量、模型规格、CXL memory 分配和托管服务级别计费。',
+                        aiLi2: '• 适用于托管推理、私有模型服务、长上下文评估、RAG，以及从 PoC 到生产的过渡。',
+                        aiLi3: '• 可随租赁一起报价月度最低消费、承诺容量或弹性突发用量模型。',
+                        aiCta: '获取 AI 计费模型',
+                        agentTitle: 'Agent Sandbox 计费',
+                        agentKicker: '面向 Agent 负载的隔离环境',
+                        isolated: '隔离',
+                        agentLi1: '• 按 sandbox 实例、CPU/GPU/NPU 配额、运行时长、持久化存储、网络和 API 用量计费。',
+                        agentLi2: '• 面向 Coding Agent、研究 Agent、浏览器自动化、工具调用评估和可复现实验运行。',
+                        agentLi3: '• 支持按席位、按项目，或面向团队的承诺 sandbox 资源池。',
+                        agentCta: '获取沙箱计费模型'
                     },
                     commercial: {
                         eyebrow: '商业结构',
