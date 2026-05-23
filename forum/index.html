@@ -97,7 +97,7 @@
                 <div class="flex items-center gap-2">
                     <button id="token-button" type="button" class="inline-flex items-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700 shadow-sm transition-colors hover:border-brand-200 hover:text-brand-700" title="GitHub token">
                         <i data-lucide="key-round" class="w-4 h-4"></i>
-                        <span id="token-button-label" class="hidden sm:inline">Connect</span>
+                        <span id="token-button-label" class="hidden sm:inline">Login</span>
                     </button>
                     <button id="new-thread-button" type="button" class="inline-flex items-center gap-2 rounded-md bg-slate-900 px-3 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800">
                         <i data-lucide="square-pen" class="w-4 h-4"></i>
@@ -388,11 +388,8 @@
             });
 
             els.tokenButton.addEventListener('click', function() {
-                els.tokenInput.value = state.token;
-                openModal(els.tokenModal);
-                setTimeout(function() {
-                    els.tokenInput.focus();
-                }, 50);
+                var returnPath = window.location.pathname + window.location.search + window.location.hash;
+                window.location.href = '../login/?return=' + encodeURIComponent(returnPath);
             });
 
             els.saveToken.addEventListener('click', function() {
@@ -426,11 +423,11 @@
 
         function updateTokenUi() {
             if (state.token) {
-                els.tokenButtonLabel.textContent = 'Connected';
+                els.tokenButtonLabel.textContent = 'Logged in';
                 els.createSubmitLabel.textContent = 'Create Thread';
                 els.tokenStatus.textContent = 'Token saved in this browser.';
             } else {
-                els.tokenButtonLabel.textContent = 'Connect';
+                els.tokenButtonLabel.textContent = 'Login';
                 els.createSubmitLabel.textContent = 'Open GitHub';
                 els.tokenStatus.textContent = 'Read access works without a token.';
             }
@@ -780,8 +777,11 @@
         function renderCommentComposer(issue) {
             if (!state.token) {
                 return '<div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">' +
-                    '<p class="text-sm text-slate-500">Connect GitHub to reply here, or continue on GitHub.</p>' +
-                    '<a href="' + escapeAttribute(issue.html_url) + '" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-200 hover:text-brand-700"><i data-lucide="external-link" class="w-4 h-4"></i>Reply on GitHub</a>' +
+                    '<p class="text-sm text-slate-500">Log in with GitHub to reply here, or continue on GitHub.</p>' +
+                    '<div class="flex flex-col gap-2 sm:flex-row">' +
+                        '<a href="../login/?return=' + encodeURIComponent(window.location.pathname + window.location.search + window.location.hash) + '" class="inline-flex items-center justify-center gap-2 rounded-md bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-slate-800"><i data-lucide="log-in" class="w-4 h-4"></i>Login</a>' +
+                        '<a href="' + escapeAttribute(issue.html_url) + '" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-200 hover:text-brand-700"><i data-lucide="external-link" class="w-4 h-4"></i>Reply on GitHub</a>' +
+                    '</div>' +
                 '</div>';
             }
 
